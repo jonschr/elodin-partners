@@ -72,6 +72,15 @@ include_once 'template/shortcode.php';
 // Enqueue Scripts and Styles.
 add_action( 'wp_enqueue_scripts', 'redbluepartners_enqueue_everything' );
 function redbluepartners_enqueue_everything() {
-    wp_enqueue_style( 'redblue-partners-style', plugin_dir_url( __FILE__ ) . '/css/redblue_partners.css' );
-    wp_enqueue_style( 'redblue-partners-fontello', plugin_dir_url( __FILE__ ) . '/fontello/css/fontello.css' );
+    
+    //* Core styles
+    wp_register_style( 'redblue-partners-style', plugin_dir_url( __FILE__ ) . '/css/redblue_partners.css' );
+    wp_register_style( 'redblue-partners-fontello', plugin_dir_url( __FILE__ ) . '/fontello/css/fontello.css' );
+
+    //* Featherlight
+    wp_register_style( 'redblue-partners-featherlight-style', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.css' );
+    wp_register_script( 'redblue-partners-featherlight-script', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.js', 'jquery' );
+
 }
+
+

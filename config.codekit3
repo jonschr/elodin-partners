@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25813",
 "files": {
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
 	"\/css\/_shortcode.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -50,6 +56,479 @@
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
+		},
+	"\/featherlight\/.bowerrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/.bowerrc",
+		"oF": 0
+		},
+	"\/featherlight\/.github\/CONTRIBUTING.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/featherlight\/.github\/CONTRIBUTING.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/featherlight\/.github\/ISSUE_TEMPLATE.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/featherlight\/.github\/ISSUE_TEMPLATE.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/featherlight\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/.gitignore",
+		"oF": 0
+		},
+	"\/featherlight\/.jshintrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/.jshintrc",
+		"oF": 0
+		},
+	"\/featherlight\/.travis.yml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/.travis.yml",
+		"oF": 0
+		},
+	"\/featherlight\/assets\/fonts\/glyphicons-halflings-regular.eot": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/assets\/fonts\/glyphicons-halflings-regular.eot",
+		"oF": 0
+		},
+	"\/featherlight\/assets\/fonts\/glyphicons-halflings-regular.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/featherlight\/assets\/fonts\/glyphicons-halflings-regular.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/featherlight\/assets\/fonts\/glyphicons-halflings-regular.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/assets\/fonts\/glyphicons-halflings-regular.ttf",
+		"oF": 0
+		},
+	"\/featherlight\/assets\/fonts\/glyphicons-halflings-regular.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/assets\/fonts\/glyphicons-halflings-regular.woff",
+		"oF": 0
+		},
+	"\/featherlight\/assets\/images\/black.jpg": {
+		"ft": 16384,
+		"iS": 90798,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/black.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/images\/black.thumb.jpg": {
+		"ft": 16384,
+		"iS": 9034,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/black.thumb.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/images\/blue.jpg": {
+		"ft": 16384,
+		"iS": 19251,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/blue.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/images\/blue.thumb.jpg": {
+		"ft": 16384,
+		"iS": 8946,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/blue.thumb.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/images\/droplets.jpg": {
+		"ft": 16384,
+		"iS": 84573,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/droplets.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/images\/droplets.thumb.jpg": {
+		"ft": 16384,
+		"iS": 11950,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/droplets.thumb.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/images\/feed.jpg": {
+		"ft": 16384,
+		"iS": 45755,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/feed.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/images\/feed.thumb.jpg": {
+		"ft": 16384,
+		"iS": 16682,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/feed.thumb.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/images\/red_and_yellow.jpg": {
+		"ft": 16384,
+		"iS": 329461,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/red_and_yellow.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/images\/red_and_yellow.thumb.jpg": {
+		"ft": 16384,
+		"iS": 27470,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/red_and_yellow.thumb.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/images\/two_birds.jpg": {
+		"ft": 16384,
+		"iS": 52385,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/two_birds.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/images\/two_birds.thumb.jpg": {
+		"ft": 16384,
+		"iS": 10929,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/images\/two_birds.thumb.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/assets\/javascripts\/jquery-1.7.0.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/javascripts\/min\/jquery-1.7.0.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/featherlight\/assets\/stylesheets\/bootstrap.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/featherlight\/assets\/stylesheets\/bootstrap.min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/featherlight\/bower.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/featherlight\/bower-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/featherlight\/CHANGELOG.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/featherlight\/CHANGELOG.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/featherlight\/featherlight.jquery.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/featherlight\/featherlight.jquery-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/featherlight\/gallery.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/gallery.html",
+		"oF": 0
+		},
+	"\/featherlight\/Gruntfile.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/featherlight\/min\/Gruntfile-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/featherlight\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/index.html",
+		"oF": 0
+		},
+	"\/featherlight\/LICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/LICENSE",
+		"oF": 0
+		},
+	"\/featherlight\/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/featherlight\/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/featherlight\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/featherlight\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/featherlight\/release\/featherlight.gallery.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/featherlight\/release\/featherlight.gallery.min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/featherlight\/release\/featherlight.gallery.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/featherlight\/release\/min\/featherlight.gallery.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/featherlight\/release\/featherlight.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/featherlight\/release\/featherlight.min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/featherlight\/release\/featherlight.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/featherlight\/release\/min\/featherlight.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/featherlight\/src\/.jshintrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/src\/.jshintrc",
+		"oF": 0
+		},
+	"\/featherlight\/src\/featherlight.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/featherlight\/src\/featherlight-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/featherlight\/src\/featherlight.gallery.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/featherlight\/src\/featherlight.gallery-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/featherlight\/src\/featherlight.gallery.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/featherlight\/src\/min\/featherlight.gallery-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/featherlight\/src\/featherlight.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/featherlight\/src\/min\/featherlight-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/featherlight\/src\/gallery.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/src\/gallery.html",
+		"oF": 0
+		},
+	"\/featherlight\/src\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/src\/index.html",
+		"oF": 0
+		},
+	"\/featherlight\/test\/.jshintrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/test\/.jshintrc",
+		"oF": 0
+		},
+	"\/featherlight\/test\/featherlight.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/test\/featherlight.html",
+		"oF": 0
+		},
+	"\/featherlight\/test\/featherlight_gallery.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/featherlight\/test\/featherlight_gallery.html",
+		"oF": 0
+		},
+	"\/featherlight\/test\/featherlight_gallery_test.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/featherlight\/test\/min\/featherlight_gallery_test-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/featherlight\/test\/featherlight_test.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/featherlight\/test\/min\/featherlight_test-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/featherlight\/test\/fixtures\/photo.jpeg": {
+		"ft": 16384,
+		"iS": 25519,
+		"oA": 0,
+		"oAP": "\/featherlight\/test\/fixtures\/photo.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/test\/fixtures\/photo_large.jpg": {
+		"ft": 16384,
+		"iS": 38984,
+		"oA": 0,
+		"oAP": "\/featherlight\/test\/fixtures\/photo_large.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/featherlight\/test\/helpers\/patiently.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/featherlight\/test\/helpers\/min\/patiently-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/fontello\/config.json": {
 		"ft": 524288,
@@ -208,8 +687,8 @@
 	},
 "projectAttributes": {
 	"creationDate": 516605800,
-	"displayValue": "redblue-partners",
-	"displayValueWasSetByUser": 0,
+	"displayValue": "Grace Center: redblue-partners",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-angryPicard"
 	},
 "projectSettings": {

@@ -125,5 +125,24 @@
 		text-decoration: none;
 		font-size: 12px;
 		line-height: 1em;
+		transition: .3s all;
+	}
+
+	.entry:hover .partner-edit-link {
+		color: white;
+	}
+
+	.partner-content {
+		display: none;
+	}
+}
+
+/* ==========================================================================
+   Featherlight
+   ========================================================================== */
+
+.featherlight-content .partner-content {
+	h2 {
+		margin-bottom: 15px;
 	}
 }
