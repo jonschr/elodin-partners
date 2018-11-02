@@ -1,11 +1,12 @@
 <?php
 /*
-    Plugin Name: Redblue Partners
-    Plugin URI: http://redblue.us
-    Description: Functionality specific to your site which should be maintained even if you switch themes
-    Version: 1.0.2
+    Plugin Name: Elodin Partners
+    Plugin URI: https://github.com/jonschr/elodin-partners
+    GitHub Plugin URI: https://github.com/jonschr/elodin-partners
+    Description: Just another Partners theme
+    Version: 1.1
     Author: Jon Schroeder
-    Author URI: http://redblue.us
+    Author URI: https://elod.in
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -23,7 +24,10 @@
 /////////////////
 
 // Plugin Directory
-define( 'REDBLUEPARTERS_DIR', dirname( __FILE__ ) );
+define( 'ELODIN_PARTNERS_DIRECTORY', dirname( __FILE__ ) );
+
+// Define the version of the plugin
+define ( 'ELODIN_PARTNERS_VERSION', '1.1' );
 
 /**
  * Add a notification if ACF isn't installed and active
@@ -65,21 +69,23 @@ include_once 'lib/taxonomy.php';
 // Register custom fields
 include_once 'lib/custom_fields.php';
 
+// Admin columns
+include_once 'lib/admin_columns.php';
+
 // Register shortcode
 include_once 'template/shortcode.php';
-
 
 // Enqueue Scripts and Styles.
 add_action( 'wp_enqueue_scripts', 'redbluepartners_enqueue_everything' );
 function redbluepartners_enqueue_everything() {
     
     //* Core styles
-    wp_register_style( 'redblue-partners-style', plugin_dir_url( __FILE__ ) . '/css/redblue_partners.css' );
-    wp_register_style( 'redblue-partners-fontello', plugin_dir_url( __FILE__ ) . '/fontello/css/fontello.css' );
+    wp_register_style( 'elodin-partners-style', plugin_dir_url( __FILE__ ) . '/css/elodin-partners.css' );
+    wp_register_style( 'elodin-partners-fontello', plugin_dir_url( __FILE__ ) . '/fontello/css/fontello.css' );
 
     //* Featherlight
-    wp_register_style( 'redblue-partners-featherlight-style', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.css' );
-    wp_register_script( 'redblue-partners-featherlight-script', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.js', 'jquery' );
+    wp_register_style( 'elodin-partners-featherlight-style', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.css' );
+    wp_register_script( 'elodin-partners-featherlight-script', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.js', 'jquery' );
 
 }
 

@@ -1,18 +1,18 @@
 <?php
 
-add_action( 'before_loop_layout_partners', 'rb_partner_scripts_styles' );
-function rb_partner_scripts_styles() {
-	wp_enqueue_style( 'redblue-partners-style' );
-    wp_enqueue_style( 'redblue-partners-fontello' );
+add_action( 'before_loop_layout_partners', 'elodin_partners_scripts_styles' );
+function elodin_partners_scripts_styles() {
+	wp_enqueue_style( 'elodin-partners-style' );
+    wp_enqueue_style( 'elodin-partners-fontello' );
 
-    wp_enqueue_style( 'redblue-partners-featherlight-style' );
-    wp_enqueue_script( 'redblue-partners-featherlight-script' );
+    wp_enqueue_style( 'elodin-partners-featherlight-style' );
+    wp_enqueue_script( 'elodin-partners-featherlight-script' );
 }
 
 
 //* Add a layout for each individual partner
-add_action( 'add_loop_layout_partners', 'rb_partners_layout' );
-function rb_partners_layout() {
+add_action( 'add_loop_layout_partners', 'elodin_partners_layout' );
+function elodin_partners_layout() {
 
 	global $post;
 
@@ -24,7 +24,12 @@ function rb_partners_layout() {
 	edit_post_link( 'Edit this partner', '', '', get_the_ID(), 'partner-edit-link' );
 
 	//* Output the featured image
-    printf( '<div class="featured-image" style="background-image:url( %s )"></div>', $background );
+	if ( has_post_thumbnail() )
+	    printf( '<div class="featured-image" style="background-image:url( %s )"></div>', $background );
+	
+	//* If there's no thumb, let's output the name
+	if ( !has_post_thumbnail() )
+		printf( '<div class="no-thumb"><h3>%s</h3></div>', $title );
 
 	echo '<div class="overlay"><div class="overlay-inner">';
 
