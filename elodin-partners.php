@@ -4,7 +4,7 @@
     Plugin URI: https://github.com/jonschr/elodin-partners
     GitHub Plugin URI: https://github.com/jonschr/elodin-partners
     Description: Just another Partners theme
-    Version: 1.1
+    Version: 1.1.1
     Author: Jon Schroeder
     Author URI: https://elod.in
 
@@ -27,7 +27,7 @@
 define( 'ELODIN_PARTNERS_DIRECTORY', dirname( __FILE__ ) );
 
 // Define the version of the plugin
-define ( 'ELODIN_PARTNERS_VERSION', '1.1' );
+define ( 'ELODIN_PARTNERS_VERSION', '1.1.1' );
 
 /**
  * Add a notification if ACF isn't installed and active
