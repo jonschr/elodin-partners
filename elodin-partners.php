@@ -90,3 +90,19 @@ function redbluepartners_enqueue_everything() {
 }
 
 
+/**
+ * Backend styles and scripts
+ */
+add_action( 'enqueue_block_editor_assets', 'redbluepartners_enqueue_everything_gutenberg' );
+function redbluepartners_enqueue_everything_gutenberg() {
+
+    //* Core styles
+    wp_enqueue_style( 'elodin-partners-style', plugin_dir_url( __FILE__ ) . '/css/elodin-partners.css' );
+    wp_enqueue_style( 'elodin-partners-fontello', plugin_dir_url( __FILE__ ) . '/fontello/css/fontello.css' );
+
+    //* Featherlight
+    wp_enqueue_style( 'elodin-partners-featherlight-style', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.css' );
+    wp_enqueue_script( 'elodin-partners-featherlight-script', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.js', 'jquery' );
+
+}
+
