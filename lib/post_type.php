@@ -30,17 +30,18 @@ function redbluepartners_register_post_types() {
 
 	$args = array(
 		'labels' => $labels,
-		'public' => true,
-		'publicly_queryable' => true,
+		'public' => false,
+		'publicly_queryable' => false,
 		'show_ui' => true,
 		'show_in_menu' => true,
+		'show_in_nav_menus' => false,
 		'query_var' => true,
 		'rewrite' => true,
 		'capability_type' => 'post',
 		'rewrite' => array( 'slug' => 'partners' ),
 		'has_archive' => false,
 		'hierarchical' => false,
-		'menu_position' => 4,
+		'menu_position' => 20,
 		'menu_icon' => 'dashicons-networking',
 		'supports' => array( 'title', 'thumbnail', 'editor' )
 	);
@@ -50,14 +51,3 @@ function redbluepartners_register_post_types() {
 }
 
 add_action( 'init', 'redbluepartners_register_post_types' );
-
-//* Redirect the single posts to the custom archive page
-add_action( 'template_redirect', 'redbluepartners_redirect_single_partners' );
-function redbluepartners_redirect_single_partners() {
-    if ( !is_singular( 'partners' ) )
-        return;
-
-    wp_redirect( home_url() . '/partners/', 301 );
-
-    exit;
-}

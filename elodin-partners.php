@@ -4,7 +4,7 @@
     Plugin URI: https://github.com/jonschr/elodin-partners
     GitHub Plugin URI: https://github.com/jonschr/elodin-partners
     Description: Just another Partners theme
-    Version: 1.1.1
+    Version: 1.3.0
     Author: Jon Schroeder
     Author URI: https://elod.in
 
@@ -24,41 +24,10 @@
 /////////////////
 
 // Plugin Directory
-define( 'ELODIN_PARTNERS_DIRECTORY', dirname( __FILE__ ) );
+define( 'ELODIN_PARTNERS_DIRECTORY', plugin_dir_url( __FILE__ ) );
 
 // Define the version of the plugin
-define ( 'ELODIN_PARTNERS_VERSION', '1.1.1' );
-
-/**
- * Add a notification if ACF isn't installed and active
- */
-add_action( 'admin_notices', 'redbluepartners_error_notice_ACF' );
-function redbluepartners_error_notice_ACF() {
-
-    if( !class_exists( 'acf' ) ) {
-        echo '<div class="error notice"><p>Please install and activate the <a target="_blank" href="https://www.advancedcustomfields.com/pro/">Advanced Custom Fields Pro</a> plugin. Without it, the Red Blue Partners plugin won\'t work properly.</p></div>';
-    }
-
-    //* Testing to see whether we have the Pro version of ACF installed
-    if( class_exists( 'acf' ) && !class_exists( 'acf_pro_updates' ) ) {
-        echo '<div class="error notice"><p>It looks like you\'ve installed the free version of Advanced Custom Fields. To work properly, the Red Blue Partners plugin requires <a target="_blank" href="https://www.advancedcustomfields.com/pro/">the Pro version</a> instead.</p></div>';
-    }
-}
-
-/**
- * Add a notification if Genesis isn't installed and active
- */
-add_action( 'admin_notices', 'redbluepartners_error_notice_genesis' );
-function redbluepartners_error_notice_genesis() {
-    if( !function_exists( 'genesis' ) ) {
-        echo '<div class="error notice"><p>Please install and activate the <a target="_blank" href="http://my.studiopress.com/themes/genesis/">Genesis Framework</a> parent theme, then install a child theme. Without the framework, the Red Blue Partners plugin won\'t work properly.</p></div>';
-    }
-}
-
-//* If we don't have Genesis running, let's bail out right there
-$theme = wp_get_theme(); // gets the current theme
-if ( 'genesis' != $theme['Template'] )
-    return;
+define ( 'ELODIN_PARTNERS_VERSION', '1.3.0' );
 
 // Register post types
 include_once 'lib/post_type.php';
@@ -75,34 +44,37 @@ include_once 'lib/admin_columns.php';
 // Register shortcode
 include_once 'template/shortcode.php';
 
+// Documentation sidebar link
+include_once 'lib/documentation_sidebar_link.php';
+
 // Enqueue Scripts and Styles.
-add_action( 'wp_enqueue_scripts', 'redbluepartners_enqueue_everything' );
-function redbluepartners_enqueue_everything() {
+add_action( 'wp_enqueue_scripts', 'elodinpartners_enqueue_everything' );
+function elodinpartners_enqueue_everything() {
     
     //* Core styles
-    wp_register_style( 'elodin-partners-style', plugin_dir_url( __FILE__ ) . '/css/elodin-partners.css' );
-    wp_register_style( 'elodin-partners-fontello', plugin_dir_url( __FILE__ ) . '/fontello/css/fontello.css' );
+    wp_register_style( 'elodin-partners-style', ELODIN_PARTNERS_DIRECTORY . 'css/elodin-partners.css' );
+    wp_register_style( 'elodin-partners-fontello', ELODIN_PARTNERS_DIRECTORY . 'fontello/css/fontello.css' );
 
     //* Featherlight
-    wp_register_style( 'elodin-partners-featherlight-style', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.css' );
-    wp_register_script( 'elodin-partners-featherlight-script', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.js', 'jquery' );
+    wp_register_style( 'elodin-partners-featherlight-style', ELODIN_PARTNERS_DIRECTORY . 'featherlight/src/featherlight.css' );
+    wp_register_script( 'elodin-partners-featherlight-script', ELODIN_PARTNERS_DIRECTORY . 'featherlight/src/featherlight.js', 'jquery' );
 
 }
 
+//* Admin columns pro
+// add_filter( 'acp/storage/file/directory/writable', '__return_true' );
+// add_filter( 'acp/storage/file/directory', function() {
+//     // Use a writable path, directory will be created for you
+//     return plugin_dir_url( __FILE__ ) . 'acp-settings';
+// } );
 
-/**
- * Backend styles and scripts
- */
-add_action( 'enqueue_block_editor_assets', 'redbluepartners_enqueue_everything_gutenberg' );
-function redbluepartners_enqueue_everything_gutenberg() {
+// Updater
+require 'vendor/plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/jonschr/elodin-partners',
+	__FILE__,
+	'elodin-partners'
+);
 
-    //* Core styles
-    wp_enqueue_style( 'elodin-partners-style', plugin_dir_url( __FILE__ ) . '/css/elodin-partners.css' );
-    wp_enqueue_style( 'elodin-partners-fontello', plugin_dir_url( __FILE__ ) . '/fontello/css/fontello.css' );
-
-    //* Featherlight
-    wp_enqueue_style( 'elodin-partners-featherlight-style', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.css' );
-    wp_enqueue_script( 'elodin-partners-featherlight-script', plugin_dir_url( __FILE__ ) . '/featherlight/src/featherlight.js', 'jquery' );
-
-}
-
+// Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
