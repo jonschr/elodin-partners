@@ -1,3 +1,7 @@
+### 1.4.0
+* Adding gulp
+* Removing codekit support
+
 ### 1.3.0
 * Adding update capabilities through PUC
 * Adding link to documentation (currently unused, but at least linking over)

@@ -1,1 +1,3 @@
-*.codekit3
+/composer.lock
+/phpcs.xml
+node_modules/
