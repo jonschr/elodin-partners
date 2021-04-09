@@ -4,7 +4,7 @@
     Plugin URI: https://github.com/jonschr/elodin-partners
     GitHub Plugin URI: https://github.com/jonschr/elodin-partners
     Description: Just another Partners theme
-    Version: 1.4.0
+    Version: 1.4.1
     Author: Jon Schroeder
     Author URI: https://elod.in
 
@@ -27,7 +27,7 @@
 define( 'ELODIN_PARTNERS_DIRECTORY', plugin_dir_url( __FILE__ ) );
 
 // Define the version of the plugin
-define ( 'ELODIN_PARTNERS_VERSION', '1.4.0' );
+define ( 'ELODIN_PARTNERS_VERSION', '1.4.1' );
 
 // Register post types
 include_once 'lib/post_type.php';

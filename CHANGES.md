@@ -1,3 +1,6 @@
+### 1.4.1
+* Fixing naming convention for a few functions (conflict with theme)
+
 ### 1.4.0
 * Adding gulp
 * Removing codekit support
