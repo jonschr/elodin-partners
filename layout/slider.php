@@ -1,18 +1,28 @@
 <?php
 
-add_action( 'before_loop_layout_partners', 'elodin_partners_scripts_styles' );
-function elodin_partners_scripts_styles() {
+add_action( 'before_loop_layout_partners_slider', 'elodin_partners_slider_scripts_styles' );
+function elodin_partners_slider_scripts_styles() {
+	
+	//* Base styles
 	wp_enqueue_style( 'elodin-partners-style' );
     wp_enqueue_style( 'elodin-partners-fontello' );
-
+	
+	//* Featherlight
     wp_enqueue_style( 'elodin-partners-featherlight-style' );
     wp_enqueue_script( 'elodin-partners-featherlight-script' );
+	
+	//* Slick slider
+	wp_enqueue_style( 'elodin-partners-slick-style' );
+    wp_enqueue_style( 'elodin-partners-slick-theme' );
+	wp_enqueue_script( 'elodin-partners-slick-script' );
+	wp_enqueue_script( 'elodin-partners-slick-init' );
+	
 }
 
 
 //* Add a layout for each individual partner
-add_action( 'add_loop_layout_partners', 'elodin_partners_layout' );
-function elodin_partners_layout() {
+add_action( 'add_loop_layout_partners_slider', 'elodin_partners_slider_layout' );
+function elodin_partners_slider_layout() {
 
 	global $post;
 

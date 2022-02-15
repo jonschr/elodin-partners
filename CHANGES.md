@@ -1,3 +1,6 @@
+### 1.5
+* Adding slider layout using variable-width slides
+
 ### 1.4.1
 * Fixing naming convention for a few functions (conflict with theme)
 

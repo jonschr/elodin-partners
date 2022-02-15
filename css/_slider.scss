@@ -1,0 +1,201 @@
+/* ==========================================================================
+   Partners shortcode
+   ========================================================================== */
+
+.loop-container.loop-layout-partners_slider {
+    // display: none;
+    opacity: 0;
+    height: 200px;
+    transition: .3s all ease;
+    margin: 0 auto;
+    max-width: calc(100vw - 90px);
+
+    &.slick-initialized {
+        // display: block;
+        opacity: 1;
+        height: auto;
+    }
+
+    .slick-track {
+        padding: 10px 0;
+
+        .slick-slide {
+            margin: 0 10px;
+        }
+    }
+
+    .slick-next,
+    .slick-prev {
+        &:before {
+            color: rgba(#555, 0.7);
+        }
+    }
+
+    .slick-next:before {
+        font-family: 'dashicons';
+        content: "\f345";
+    }
+
+    .slick-prev:before {
+        font-family: 'dashicons';
+        content: "\f341";
+    }
+
+    .entry {
+        margin: 0;
+    }
+
+    .loop-item-inner {
+        background-color: white;
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+        transition: .5s all;
+        box-shadow: 0 0 0 2px rgba(black, 0.03);
+        width: 183px;
+        height: 0;
+        padding-top: 75%;
+        overflow: hidden;
+    }
+
+    .featured-image {
+        position: absolute;
+
+        // background-color: gray;
+        left: 10%;
+        right: 10%;
+        bottom: 10%;
+        top: 10%;
+        display: block;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .no-thumb {
+        top: 50%;
+        position: absolute;
+        text-align: center;
+        transform: translateY(-50%);
+        width: 100%;
+        left: 0;
+        display: block;
+        transition: .5s all;
+        padding: 0 20px;
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+
+        @include mobile {
+            padding: 0 10px;
+        }
+    }
+
+    .overlay {
+        background-color: rgba(black, 0.85);
+        padding: 0 20px;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: .5s opacity;
+        border-radius: 3px;
+
+        .overlay-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 100%;
+            padding: 0 20px;
+            text-align: center;
+
+            > :last-child {
+                margin-bottom: 0;
+            }
+
+            @include mobile {
+                padding: 0 10px;
+            }
+        }
+
+        * {
+            color: white;
+        }
+    }
+
+    .entry:hover {
+        // box-shadow: 0 0 0 2px rgba( black, 0.8 );
+
+        .overlay {
+            opacity: 1;
+        }
+
+        .no-thumb {
+            opacity: 0;
+        }
+    }
+
+    .partners-link {
+        font-size: 20px;
+        padding: 8px 12px;
+        text-decoration: none;
+        font-size: 18px;
+        border: 1px solid white;
+        margin: 5px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        transition: .5s all;
+
+        @include mobile {
+            padding: 5px;
+            margin: 3px;
+            font-size: 16px;
+        }
+
+
+        &:hover {
+            background-color: white;
+            color: rgba(black, 0.8);
+        }
+    }
+
+    h3 {
+        letter-spacing: 0;
+        font-size: 16px;
+        margin-bottom: 15px;
+        font-weight: bold;
+
+        @include mobile {
+            font-size: 12px;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+    }
+
+    .partner-edit-link {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        padding: 4px;
+        z-index: 20;
+        color: gray;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 1em;
+        transition: .3s all;
+    }
+
+    .entry:hover .partner-edit-link {
+        color: white;
+    }
+
+    .partner-content {
+        display: none;
+    }
+}
