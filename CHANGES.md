@@ -1,3 +1,6 @@
+### 1.5.1 
+* BUGFIX: undefined constant error, rebuilding Admin Coluns Pro fields
+
 ### 1.5
 * Adding slider layout using variable-width slides
 
