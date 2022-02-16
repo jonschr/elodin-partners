@@ -3,7 +3,7 @@
     Plugin Name: Elodin Partners
     Plugin URI: https://github.com/jonschr/elodin-partners
     GitHub Plugin URI: https://github.com/jonschr/elodin-partners
-    Description: Just another Partners theme
+    Description: Just another Partners plugin
     Version: 1.5.2
     Author: Jon Schroeder
     Author URI: https://elod.in
