@@ -5,7 +5,7 @@ return array (
   'title' => 'Partners',
   'type' => 'partners',
   'id' => '620d35fb1b3e6',
-  'updated' => 1645033270,
+  'updated' => 1645045238,
   'columns' => 
   array (
     '620d35d60f9db4' => 
@@ -22,7 +22,7 @@ return array (
       'sort' => 'on',
       'edit' => 'on',
       'bulk_edit' => 'on',
-      'search' => 'off',
+      'search' => 'on',
       'filter' => 'off',
       'filter_label' => '',
       'name' => '620d35d60f9db4',
@@ -51,7 +51,7 @@ return array (
       'sort' => 'on',
       'edit' => 'on',
       'bulk_edit' => 'on',
-      'search' => 'off',
+      'search' => 'on',
       'filter' => 'off',
       'filter_label' => '',
       'name' => '620d35ebb1eb84',
