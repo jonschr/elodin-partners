@@ -1,3 +1,6 @@
+### 1.5.4
+* Make columns filterable by empty images
+
 ### 1.5.3
 * Fixing wording describing this plugin as a theme
 
