@@ -4,7 +4,7 @@
     Plugin URI: https://github.com/jonschr/elodin-partners
     GitHub Plugin URI: https://github.com/jonschr/elodin-partners
     Description: Just another Partners theme
-    Version: 1.5.1
+    Version: 1.5.2
     Author: Jon Schroeder
     Author URI: https://elod.in
 
@@ -24,10 +24,11 @@
 /////////////////
 
 // Plugin Directory
-define( 'ELODIN_PARTNERS_DIRECTORY', plugin_dir_path( __FILE__ ) );
+define( 'ELODIN_PARTNERS_DIRECTORY', plugin_dir_url( __FILE__ ) );
+define( 'ELODIN_PARTNERS_PATH', plugin_dir_path( __FILE__ ) );
 
 // Define the version of the plugin
-define ( 'ELODIN_PARTNERS_VERSION', '1.5.1' );
+define ( 'ELODIN_PARTNERS_VERSION', '1.5.2' );
 
 // Register post types
 include_once 'lib/post_type.php';
@@ -131,7 +132,7 @@ use AC\ListScreenRepository\Rule;
 add_filter( 'acp/storage/repositories', function( array $repositories, ListScreenRepositoryFactory $factory ) {
     
     //! Change $writable to true to allow changes to columns for the content types below
-    $writable = false;
+    $writable = true;
     
     // 2. Add rules to target individual list tables.
     // Defaults to Rules::MATCH_ANY added here for clarity, other option is Rules::MATCH_ALL
@@ -140,7 +141,7 @@ add_filter( 'acp/storage/repositories', function( array $repositories, ListScree
     
     // 3. Register your repository to the stack
     $repositories['elodin-partners'] = $factory->create(
-        ELODIN_PARTNERS_DIRECTORY . '/acp-settings',
+        ELODIN_PARTNERS_PATH . '/acp-settings',
         $writable,
         $rules
     );

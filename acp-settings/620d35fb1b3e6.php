@@ -5,7 +5,7 @@ return array (
   'title' => 'Partners',
   'type' => 'partners',
   'id' => '620d35fb1b3e6',
-  'updated' => 1645032988,
+  'updated' => 1645033270,
   'columns' => 
   array (
     '620d35d60f9db4' => 

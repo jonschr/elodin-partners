@@ -1,3 +1,6 @@
+## 1.5.2
+* BUFIX: acidentally broke a path, fixing that
+
 ### 1.5.1 
 * BUGFIX: undefined constant error, rebuilding Admin Coluns Pro fields
 
