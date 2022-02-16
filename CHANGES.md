@@ -1,4 +1,7 @@
-## 1.5.2
+### 1.5.3
+* Fixing wording describing this plugin as a theme
+
+### 1.5.2
 * BUFIX: acidentally broke a path, fixing that
 
 ### 1.5.1 
