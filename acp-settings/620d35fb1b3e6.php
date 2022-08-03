@@ -1,11 +1,11 @@
 <?php
 
 return array (
-  'version' => '5.6.4',
+  'version' => '5.7.3',
   'title' => 'Partners',
   'type' => 'partners',
   'id' => '620d35fb1b3e6',
-  'updated' => 1645045238,
+  'updated' => 1659498698,
   'columns' => 
   array (
     '620d35d60f9db4' => 
@@ -40,13 +40,13 @@ return array (
       'search' => 'off',
       'name' => 'title',
     ),
-    '620d35ebb1eb84' => 
+    '62e9f0c6999998' => 
     array (
-      'type' => 'column-acf_field',
+      'type' => 'partner_url',
       'label' => 'Partner website',
       'width' => '',
       'width_unit' => '%',
-      'field' => 'partner_url',
+      'link_label' => '',
       'export' => 'off',
       'sort' => 'on',
       'edit' => 'on',
@@ -54,7 +54,7 @@ return array (
       'search' => 'on',
       'filter' => 'off',
       'filter_label' => '',
-      'name' => '620d35ebb1eb84',
+      'name' => '62e9f0c6999998',
     ),
     'taxonomy-partnercategories' => 
     array (
@@ -102,6 +102,8 @@ return array (
     'hide_submenu' => 'off',
     'hide_search' => 'off',
     'hide_bulk_actions' => 'off',
+    'resize_columns' => 'off',
+    'hide_row_actions' => 'off',
     'horizontal_scrolling' => 'off',
     'sorting' => '0',
     'sorting_order' => 'asc',
