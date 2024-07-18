@@ -1,3 +1,7 @@
+### 1.6
+
+-   Making slick play nice with common use cases
+
 ### 1.5.5
 
 -   Update Admin Columns field that was deprecated through the ACF addon (Partner website)

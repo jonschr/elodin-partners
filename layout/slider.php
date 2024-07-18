@@ -12,9 +12,9 @@ function elodin_partners_slider_scripts_styles() {
     wp_enqueue_script( 'elodin-partners-featherlight-script' );
 	
 	//* Slick slider
-	wp_enqueue_style( 'elodin-partners-slick-style' );
-    wp_enqueue_style( 'elodin-partners-slick-theme' );
-	wp_enqueue_script( 'elodin-partners-slick-script' );
+	wp_enqueue_style( 'slick-main-style' );
+    wp_enqueue_style( 'slick-theme-style' );
+	wp_enqueue_script( 'slick-main-script' );
 	wp_enqueue_script( 'elodin-partners-slick-init' );
 	
 }

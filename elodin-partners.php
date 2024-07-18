@@ -1,22 +1,22 @@
 <?php
 /*
-    Plugin Name: Elodin Partners
-    Plugin URI: https://github.com/jonschr/elodin-partners
-    GitHub Plugin URI: https://github.com/jonschr/elodin-partners
-    Description: A plugin to display partner logos in simple grids and carousels
-    Version: 1.5.5
-    Author: Jon Schroeder
-    Author URI: https://elod.in
+	Plugin Name: Elodin Partners
+	Plugin URI: https://github.com/jonschr/elodin-partners
+	GitHub Plugin URI: https://github.com/jonschr/elodin-partners
+	Description: A plugin to display partner logos in simple grids and carousels
+	Version: 1.6
+	Author: Jon Schroeder
+	Author URI: https://elod.in
 
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    GNU General Public License for more details.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU General Public License for more details.
 */
 
 /////////////////
@@ -28,7 +28,7 @@ define( 'ELODIN_PARTNERS_DIRECTORY', plugin_dir_url( __FILE__ ) );
 define( 'ELODIN_PARTNERS_PATH', plugin_dir_path( __FILE__ ) );
 
 // Define the version of the plugin
-define ( 'ELODIN_PARTNERS_VERSION', '1.5.5' );
+define ( 'ELODIN_PARTNERS_VERSION', '1.6' );
 
 // Register post types
 include_once 'lib/post_type.php';
@@ -52,73 +52,73 @@ include_once 'lib/documentation_sidebar_link.php';
 // Enqueue Scripts and Styles.
 add_action( 'wp_enqueue_scripts', 'elodinpartners_enqueue_everything' );
 function elodinpartners_enqueue_everything() {
-    
-    //* Core styles
-    wp_register_style( 
-        'elodin-partners-style', 
-        ELODIN_PARTNERS_DIRECTORY . 'css/elodin-partners.css',
-        array(),
-        ELODIN_PARTNERS_VERSION, 
-        'screen'
-    );
-    
-    wp_register_style( 
-        'elodin-partners-fontello', 
-        ELODIN_PARTNERS_DIRECTORY . 'vendor/fontello/css/fontello.css',
-        array(),
-        ELODIN_PARTNERS_VERSION, 
-        'screen'
-    );
+	
+	//* Core styles
+	wp_register_style( 
+		'elodin-partners-style', 
+		ELODIN_PARTNERS_DIRECTORY . 'css/elodin-partners.css',
+		array(),
+		ELODIN_PARTNERS_VERSION, 
+		'screen'
+	);
+	
+	wp_register_style( 
+		'elodin-partners-fontello', 
+		ELODIN_PARTNERS_DIRECTORY . 'vendor/fontello/css/fontello.css',
+		array(),
+		ELODIN_PARTNERS_VERSION, 
+		'screen'
+	);
 
-    //* Featherlight
-    wp_register_style( 
-        'elodin-partners-featherlight-style', 
-        ELODIN_PARTNERS_DIRECTORY . 'vendor/featherlight/src/featherlight.css',
-        array(),
-        ELODIN_PARTNERS_VERSION, 
-        'screen'
-    );
-    
-    wp_register_script( 
-        'elodin-partners-featherlight-script', 
-        ELODIN_PARTNERS_DIRECTORY . 'vendor/featherlight/src/featherlight.js', 
-        array( 'jquery' ),
-        ELODIN_PARTNERS_VERSION, 
-        true    
-    );
-    
-    //* Slick
-    wp_register_style( 
-        'elodin-partners-slick-style', 
-        ELODIN_PARTNERS_DIRECTORY . 'vendor/slick/slick.css', 
-        array(),
-        ELODIN_PARTNERS_VERSION, 
-        'screen'
-    );
-    
-    wp_register_style( 
-        'elodin-partners-slick-theme', 
-        ELODIN_PARTNERS_DIRECTORY . 'vendor/slick/slick-theme.css', 
-        array(),
-        ELODIN_PARTNERS_VERSION, 
-        'screen'
-    );
-    
-    wp_register_script( 
-        'elodin-partners-slick-script', 
-        ELODIN_PARTNERS_DIRECTORY . 'vendor/slick/slick.js', 
-        array( 'jquery' ),
-        ELODIN_PARTNERS_VERSION, 
-        true    
-    );
-    
-     wp_register_script( 
-        'elodin-partners-slick-init', 
-        ELODIN_PARTNERS_DIRECTORY . 'js/slider-init.js', 
-        array( 'elodin-partners-slick-script' ),
-        ELODIN_PARTNERS_VERSION, 
-        true    
-    );
+	//* Featherlight
+	wp_register_style( 
+		'elodin-partners-featherlight-style', 
+		ELODIN_PARTNERS_DIRECTORY . 'vendor/featherlight/src/featherlight.css',
+		array(),
+		ELODIN_PARTNERS_VERSION, 
+		'screen'
+	);
+	
+	wp_register_script( 
+		'elodin-partners-featherlight-script', 
+		ELODIN_PARTNERS_DIRECTORY . 'vendor/featherlight/src/featherlight.js', 
+		array( 'jquery' ),
+		ELODIN_PARTNERS_VERSION, 
+		true    
+	);
+	
+	//* Slick
+	wp_register_style( 
+		'slick-main-style', 
+		ELODIN_PARTNERS_DIRECTORY . 'vendor/slick/slick.css', 
+		array(),
+		ELODIN_PARTNERS_VERSION, 
+		'screen'
+	);
+	
+	wp_register_style( 
+		'slick-theme-style', 
+		ELODIN_PARTNERS_DIRECTORY . 'vendor/slick/slick-theme.css', 
+		array(),
+		ELODIN_PARTNERS_VERSION, 
+		'screen'
+	);
+	
+	wp_register_script( 
+		'slick-main-script', 
+		ELODIN_PARTNERS_DIRECTORY . 'vendor/slick/slick.js', 
+		array( 'jquery' ),
+		ELODIN_PARTNERS_VERSION, 
+		true    
+	);
+	
+	 wp_register_script( 
+		'elodin-partners-slick-init', 
+		ELODIN_PARTNERS_DIRECTORY . 'js/slider-init.js', 
+		array( 'slick-main-script' ),
+		ELODIN_PARTNERS_VERSION, 
+		true    
+	);
 
 }
 
@@ -130,24 +130,24 @@ use AC\ListScreenRepository\Storage\ListScreenRepositoryFactory;
 use AC\ListScreenRepository\Rules;
 use AC\ListScreenRepository\Rule;
 add_filter( 'acp/storage/repositories', function( array $repositories, ListScreenRepositoryFactory $factory ) {
-    
-    //! Change $writable to true to allow changes to columns for the content types below
-    $writable = false;
-    
-    // 2. Add rules to target individual list tables.
-    // Defaults to Rules::MATCH_ANY added here for clarity, other option is Rules::MATCH_ALL
-    $rules = new Rules( Rules::MATCH_ANY );
-    $rules->add_rule( new Rule\EqualType( 'partners' ) );
-    
-    // 3. Register your repository to the stack
-    $repositories['elodin-partners'] = $factory->create(
-        ELODIN_PARTNERS_PATH . '/acp-settings',
-        $writable,
-        $rules
-    );
-    
-    return $repositories;
-    
+	
+	//! Change $writable to true to allow changes to columns for the content types below
+	$writable = false;
+	
+	// 2. Add rules to target individual list tables.
+	// Defaults to Rules::MATCH_ANY added here for clarity, other option is Rules::MATCH_ALL
+	$rules = new Rules( Rules::MATCH_ANY );
+	$rules->add_rule( new Rule\EqualType( 'partners' ) );
+	
+	// 3. Register your repository to the stack
+	$repositories['elodin-partners'] = $factory->create(
+		ELODIN_PARTNERS_PATH . '/acp-settings',
+		$writable,
+		$rules
+	);
+	
+	return $repositories;
+	
 }, 10, 2 );
 
 // Updater
