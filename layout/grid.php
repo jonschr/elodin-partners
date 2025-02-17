@@ -7,6 +7,8 @@ function elodin_partners_grid_scripts_styles() {
 
     wp_enqueue_style( 'elodin-partners-featherlight-style' );
     wp_enqueue_script( 'elodin-partners-featherlight-script' );
+	
+	wp_enqueue_script( 'elodin-partners-background-images' );
 }
 
 

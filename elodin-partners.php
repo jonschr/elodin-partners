@@ -4,7 +4,7 @@
 	Plugin URI: https://github.com/jonschr/elodin-partners
 	GitHub Plugin URI: https://github.com/jonschr/elodin-partners
 	Description: A plugin to display partner logos in simple grids and carousels
-	Version: 1.6
+	Version: 1.6.1
 	Author: Jon Schroeder
 	Author URI: https://elod.in
 
@@ -28,7 +28,7 @@ define( 'ELODIN_PARTNERS_DIRECTORY', plugin_dir_url( __FILE__ ) );
 define( 'ELODIN_PARTNERS_PATH', plugin_dir_path( __FILE__ ) );
 
 // Define the version of the plugin
-define ( 'ELODIN_PARTNERS_VERSION', '1.6' );
+define ( 'ELODIN_PARTNERS_VERSION', '1.6.1' );
 
 // Register post types
 include_once 'lib/post_type.php';
@@ -116,6 +116,14 @@ function elodinpartners_enqueue_everything() {
 		'elodin-partners-slick-init', 
 		ELODIN_PARTNERS_DIRECTORY . 'js/slider-init.js', 
 		array( 'slick-main-script' ),
+		ELODIN_PARTNERS_VERSION, 
+		true    
+	);
+	
+	 wp_register_script( 
+		'elodin-partners-background-images', 
+		ELODIN_PARTNERS_DIRECTORY . 'js/elodin-partners-background-images.js', 
+		array( 'jquery' ),
 		ELODIN_PARTNERS_VERSION, 
 		true    
 	);

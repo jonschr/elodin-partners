@@ -17,6 +17,8 @@ function elodin_partners_slider_scripts_styles() {
 	wp_enqueue_script( 'slick-main-script' );
 	wp_enqueue_script( 'elodin-partners-slick-init' );
 	
+	wp_enqueue_script( 'elodin-partners-background-images' );
+	
 }
 
 
