@@ -3,191 +3,193 @@
    ========================================================================== */
 
 .loop-container.loop-layout-partners {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    margin-left: -10px;
-    margin-right: -10px;
-    width: calc( 100% + 20px );
+}
 
-    .entry {
-        flex: 0 1 auto;
-        margin: 10px;
-        width: calc( 100% / 5 - 20px );
-        padding: 0;
+.loop-container.loop-layout-partners,
+.facetwp-template[data-name='partners'] {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	margin-left: -10px;
+	margin-right: -10px;
+	width: calc(100% + 20px);
 
-        @media (max-width: 1400px) {
-            width: calc( 100% / 4 - 20px );
-        }
+	.entry.type-partners,
+	.hentry.type-partners {
+		flex: 0 1 auto;
+		margin: 10px;
+		width: calc(100% / 5 - 20px);
+		padding: 0;
 
-        @include tablet {
-            width: calc( 100% / 3 - 20px );
-        }
+		@media (max-width: 1400px) {
+			width: calc(100% / 4 - 20px);
+		}
 
+		@include tablet {
+			width: calc(100% / 3 - 20px);
+		}
 
-        @include mobile {
-            width: calc( 100% / 2 - 20px );
-        }
+		@include mobile {
+			width: calc(100% / 2 - 20px);
+		}
 
+		@media (max-width: 400px) {
+			width: calc(100% / 1 - 20px);
+		}
+	}
 
-        @media (max-width: 400px) {
-            width: calc( 100% / 1 - 20px );
-        }
-    }
+	.loop-item-inner {
+		background-color: white;
+		position: relative;
+		padding: 0;
+		overflow: hidden;
+		transition: 0.5s all;
+		box-shadow: 0 0 0 2px rgba(black, 0.03);
+		width: 100%;
+		height: 0;
+		padding-top: 75%;
+		overflow: hidden;
+	}
 
-    .loop-item-inner {
-        background-color: white;
-        position: relative;
-        padding: 0;
-        overflow: hidden;
-        transition: .5s all;
-        box-shadow: 0 0 0 2px rgba(black, 0.03);
-        width: 100%;
-        height: 0;
-        padding-top: 75%;
-        overflow: hidden;
-    }
+	.featured-image {
+		position: absolute;
 
-    .featured-image {
-        position: absolute;
+		// background-color: gray;
+		left: 10%;
+		right: 10%;
+		bottom: 10%;
+		top: 10%;
+		display: block;
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
 
-        // background-color: gray;
-        left: 10%;
-        right: 10%;
-        bottom: 10%;
-        top: 10%;
-        display: block;
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
+	.no-thumb {
+		top: 50%;
+		position: absolute;
+		text-align: center;
+		transform: translateY(-50%);
+		width: 100%;
+		left: 0;
+		display: block;
+		transition: 0.5s all;
+		padding: 0 20px;
 
-    .no-thumb {
-        top: 50%;
-        position: absolute;
-        text-align: center;
-        transform: translateY(-50%);
-        width: 100%;
-        left: 0;
-        display: block;
-        transition: .5s all;
-        padding: 0 20px;
+		> :last-child {
+			margin-bottom: 0;
+		}
 
-        > :last-child {
-            margin-bottom: 0;
-        }
+		@include mobile {
+			padding: 0 10px;
+		}
+	}
 
-        @include mobile {
-            padding: 0 10px;
-        }
-    }
+	.overlay {
+		background-color: rgba(black, 0.85);
+		padding: 0 20px;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: 0.5s opacity;
+		border-radius: 3px;
 
-    .overlay {
-        background-color: rgba(black, 0.85);
-        padding: 0 20px;
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: .5s opacity;
-        border-radius: 3px;
+		.overlay-inner {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			width: 100%;
+			padding: 0 20px;
+			text-align: center;
 
-        .overlay-inner {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            width: 100%;
-            padding: 0 20px;
-            text-align: center;
+			> :last-child {
+				margin-bottom: 0;
+			}
 
-            > :last-child {
-                margin-bottom: 0;
-            }
+			@include mobile {
+				padding: 0 10px;
+			}
+		}
 
-            @include mobile {
-                padding: 0 10px;
-            }
-        }
+		* {
+			color: white;
+		}
+	}
 
-        * {
-            color: white;
-        }
-    }
+	.entry:hover {
+		// box-shadow: 0 0 0 2px rgba( black, 0.8 );
 
-    .entry:hover {
-        // box-shadow: 0 0 0 2px rgba( black, 0.8 );
+		.overlay {
+			opacity: 1;
+		}
 
-        .overlay {
-            opacity: 1;
-        }
+		.no-thumb {
+			opacity: 0;
+		}
+	}
 
-        .no-thumb {
-            opacity: 0;
-        }
-    }
+	.partners-link {
+		font-size: 20px;
+		padding: 8px 12px;
+		text-decoration: none;
+		font-size: 18px;
+		border: 1px solid white;
+		margin: 5px;
+		text-transform: uppercase;
+		border-radius: 3px;
+		transition: 0.5s all;
 
-    .partners-link {
-        font-size: 20px;
-        padding: 8px 12px;
-        text-decoration: none;
-        font-size: 18px;
-        border: 1px solid white;
-        margin: 5px;
-        text-transform: uppercase;
-        border-radius: 3px;
-        transition: .5s all;
+		@include mobile {
+			padding: 5px;
+			margin: 3px;
+			font-size: 16px;
+		}
 
-        @include mobile {
-            padding: 5px;
-            margin: 3px;
-            font-size: 16px;
-        }
+		&:hover {
+			background-color: white;
+			color: rgba(black, 0.8);
+		}
+	}
 
+	h3 {
+		letter-spacing: 0;
+		font-size: 16px;
+		margin-bottom: 15px;
+		font-weight: bold;
 
-        &:hover {
-            background-color: white;
-            color: rgba(black, 0.8);
-        }
-    }
+		@include mobile {
+			font-size: 12px;
+			margin-bottom: 10px;
+			font-weight: normal;
+		}
+	}
 
-    h3 {
-        letter-spacing: 0;
-        font-size: 16px;
-        margin-bottom: 15px;
-        font-weight: bold;
+	.partner-edit-link {
+		position: absolute;
+		top: auto;
+		bottom: 0;
+		left: 0;
+		padding: 4px;
+		z-index: 20;
+		color: gray;
+		display: inline-block;
+		text-decoration: none;
+		font-size: 12px;
+		line-height: 1em;
+		transition: 0.3s all;
+	}
 
-        @include mobile {
-            font-size: 12px;
-            margin-bottom: 10px;
-            font-weight: normal;
-        }
-    }
+	.entry:hover .partner-edit-link {
+		color: white;
+	}
 
-    .partner-edit-link {
-        position: absolute;
-        top: auto;
-        bottom: 0;
-        left: 0;
-        padding: 4px;
-        z-index: 20;
-        color: gray;
-        display: inline-block;
-        text-decoration: none;
-        font-size: 12px;
-        line-height: 1em;
-        transition: .3s all;
-    }
-
-    .entry:hover .partner-edit-link {
-        color: white;
-    }
-
-    .partner-content {
-        display: none;
-    }
+	.partner-content {
+		display: none;
+	}
 }
 
 /* ==========================================================================
@@ -195,98 +197,91 @@
    ========================================================================== */
 
 .loop-container.loop-layout-partners {
-    &.loop-columns-2 {
-        .entry {
-            width: calc( 100% / 2 - 20px );
+	&.loop-columns-2 {
+		.entry {
+			width: calc(100% / 2 - 20px);
 
-            @media (max-width: 400px) {
-                width: calc( 100% / 1 - 20px );
-            }
-        }
-    }
+			@media (max-width: 400px) {
+				width: calc(100% / 1 - 20px);
+			}
+		}
+	}
 
-    &.loop-columns-3 {
-        .entry {
-            width: calc( 100% / 3 - 20px );
+	&.loop-columns-3 {
+		.entry {
+			width: calc(100% / 3 - 20px);
 
-            @include mobile {
-                width: calc( 100% / 2 - 20px );
-            }
+			@include mobile {
+				width: calc(100% / 2 - 20px);
+			}
 
+			@media (max-width: 400px) {
+				width: calc(100% / 1 - 20px);
+			}
+		}
+	}
 
-            @media (max-width: 400px) {
-                width: calc( 100% / 1 - 20px );
-            }
-        }
-    }
+	&.loop-columns-4 {
+		.entry {
+			width: calc(100% / 4 - 20px);
 
-    &.loop-columns-4 {
-        .entry {
-            width: calc( 100% / 4 - 20px );
+			@include tablet {
+				width: calc(100% / 3 - 20px);
+			}
 
-            @include tablet {
-                width: calc( 100% / 3 - 20px );
-            }
+			@include mobile {
+				width: calc(100% / 2 - 20px);
+			}
 
+			@media (max-width: 400px) {
+				width: calc(100% / 1 - 20px);
+			}
+		}
+	}
 
-            @include mobile {
-                width: calc( 100% / 2 - 20px );
-            }
+	&.loop-columns-5 {
+		.entry {
+			width: calc(100% / 5 - 20px);
 
+			@media (max-width: 1400px) {
+				width: calc(100% / 4 - 20px);
+			}
 
-            @media (max-width: 400px) {
-                width: calc( 100% / 1 - 20px );
-            }
-        }
-    }
+			@include tablet {
+				width: calc(100% / 3 - 20px);
+			}
 
-    &.loop-columns-5 {
-        .entry {
-            width: calc( 100% / 5 - 20px );
+			@include mobile {
+				width: calc(100% / 2 - 20px);
+			}
 
-            @media (max-width: 1400px) {
-                width: calc( 100% / 4 - 20px );
-            }
+			@media (max-width: 400px) {
+				width: calc(100% / 1 - 20px);
+			}
+		}
+	}
 
-            @include tablet {
-                width: calc( 100% / 3 - 20px );
-            }
+	&.loop-columns-6 {
+		.entry {
+			width: calc(100% / 6 - 20px);
 
+			@media (max-width: 1400px) {
+				width: calc(100% / 4 - 20px);
+			}
 
-            @include mobile {
-                width: calc( 100% / 2 - 20px );
-            }
+			@include tablet {
+				width: calc(100% / 3 - 20px);
+			}
 
+			@include mobile {
+				width: calc(100% / 2 - 20px);
+			}
 
-            @media (max-width: 400px) {
-                width: calc( 100% / 1 - 20px );
-            }
-        }
-    }
-
-    &.loop-columns-6 {
-        .entry {
-            width: calc( 100% / 6 - 20px );
-
-            @media (max-width: 1400px) {
-                width: calc( 100% / 4 - 20px );
-            }
-
-            @include tablet {
-                width: calc( 100% / 3 - 20px );
-            }
-
-
-            @include mobile {
-                width: calc( 100% / 2 - 20px );
-            }
-
-
-            @media (max-width: 400px) {
-                width: calc( 100% / 1 - 20px );
-            }
-        }
-    }
+			@media (max-width: 400px) {
+				width: calc(100% / 1 - 20px);
+			}
+		}
+	}
 }
 
 /* ==========================================================================
@@ -294,7 +289,7 @@
    ========================================================================== */
 
 .featherlight-content .partner-content {
-    h2 {
-        margin-bottom: 15px;
-    }
+	h2 {
+		margin-bottom: 15px;
+	}
 }

@@ -1,7 +1,9 @@
 <?php
 
-add_action( 'before_loop_layout_partners', 'elodin_partners_grid_scripts_styles' );
-function elodin_partners_grid_scripts_styles() {
+//* Add a layout for each individual partner
+add_action( 'add_loop_layout_partners', 'elodin_partners_grid_layout' );
+function elodin_partners_grid_layout() {
+	
 	wp_enqueue_style( 'elodin-partners-style' );
     wp_enqueue_style( 'elodin-partners-fontello' );
 
@@ -9,12 +11,6 @@ function elodin_partners_grid_scripts_styles() {
     wp_enqueue_script( 'elodin-partners-featherlight-script' );
 	
 	wp_enqueue_script( 'elodin-partners-background-images' );
-}
-
-
-//* Add a layout for each individual partner
-add_action( 'add_loop_layout_partners', 'elodin_partners_grid_layout' );
-function elodin_partners_grid_layout() {
 
 	global $post;
 
