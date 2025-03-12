@@ -30,8 +30,8 @@ function redbluepartners_register_post_types() {
 
 	$args = array(
 		'labels' => $labels,
-		'public' => false,
-		'publicly_queryable' => false,
+		'public' => true,
+		'publicly_queryable' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'show_in_nav_menus' => false,
