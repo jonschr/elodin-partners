@@ -106,7 +106,7 @@ function elodinpartners_enqueue_everything() {
 	
 	wp_register_script( 
 		'slick-main-script', 
-		ELODIN_PARTNERS_DIRECTORY . 'vendor/slick/slick.js', 
+		ELODIN_PARTNERS_DIRECTORY . 'vendor/slick/slick.min.js', 
 		array( 'jquery' ),
 		ELODIN_PARTNERS_VERSION, 
 		true    
