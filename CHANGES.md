@@ -1,3 +1,12 @@
+## 1.7.1
+
+-   Bugfix for situations where there are NO background images
+
+## 1.7
+
+-   Updating NPM and our build processes, etc.
+-   Fixing minor issue with registering slick using the unminified version (which is in conflict with sibling plugins)
+
 ### 1.6
 
 -   Making slick play nice with common use cases

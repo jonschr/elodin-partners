@@ -39,6 +39,13 @@ function fadeInWhenVisible() {
 		const imageElements = document.querySelectorAll(
 			'.partners .featured-image'
 		);
+
+		// If no images exist, call callback immediately and return
+		if (imageElements.length === 0) {
+			callback();
+			return;
+		}
+
 		let imagesProcessed = 0;
 
 		imageElements.forEach((image) => {
